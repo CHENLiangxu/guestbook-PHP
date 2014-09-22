@@ -8,7 +8,6 @@ class App
 	public function __construct()
 	{
 		$url = $this->parseUrl();
-		print_r($url);
 		if (file_exists('../app/controllers/'. $url[0] . '.php'))
 		{
 			$this->controller = $url[0];
@@ -18,7 +17,6 @@ class App
 		$this->controller = new $this->controller;
 		if (isset($url[1]))
 		{
-			echo $url[1];
 			if(method_exists($this->controller, $url[1]))
 			{
 				$this->method = $url[1];
@@ -36,5 +34,6 @@ class App
 			return $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL)); 
 		}
 	}
+
 }
 ?>

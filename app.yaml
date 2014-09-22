@@ -8,10 +8,10 @@ handlers:
   script: public/index.php
 
 env_variables:
- DEVELOPMENT_DB_HOST: ''
+ DEVELOPMENT_DB_HOST: '127.0.0.1:3306'
  DEVELOPMENT_DB_USERNAME: 'root'
- DEVELOPMENT_DB_PASSWORD: ''
- DEVELOPMENT_DB_NAME: 'guestbook'
+ DEVELOPMENT_DB_PASSWORD: 'Chenlx201125'
+ DEVELOPMENT_DB_NAME: 'phpdb'
  PRODUCTION_CLOUD_SQL_INSTANCE: '/cloudsql/guestbook:my-cloudsql-instance'
  PRODUCTION_DB_USERNAME: ''
  PRODUCTION_DB_PASSWORD: ''
