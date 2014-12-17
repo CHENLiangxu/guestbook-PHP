@@ -48,5 +48,21 @@ class Mysql
 		mysqli_close($this->connect);
 	}
 
+	public function insertUser($date)
+	{
+		$name = mysqli_real_escape_string($this->connect, $date['name']);
+		$pwd = mysqli_real_escape_string($this->connect, $date['pwd']);
+		$query = "INSERT INTO user (name, pwd) VALUES ('$name', '$pwd')";
+		if (!mysqli_query($this->connect, $query)) {
+		  die('Error: ' . mysqli_error($this->connect));
+		} else {
+			return True;
+		}
+	}
+	
+	public function showUser()
+	{
+		return mysqli_query($this->connect,"SELECT * FROM user");
+	}
 }
 ?>

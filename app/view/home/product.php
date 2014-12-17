@@ -13,13 +13,12 @@
 	}
     $sql->disconnect();
     ?>
+	<p>product</p>
     <form action="/index" method="post">
       <div>code: <input type='text' name="code" required></div>
       <div>name: <input type='text' name="name" required></div>
       <div>price: <input type='text' name="price" required></div>
       <div><input type="submit" value="Add"></div>
     </form>
-	
-	<a href="/?url=user/insert/view">user</a>
   </body>
 </html>

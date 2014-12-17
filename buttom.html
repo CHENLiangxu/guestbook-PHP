@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+	alert("hello");
+    $("#myimg").imgrefresh();
+  });
+});
+</script>
+</head>
+<body>
+
+<img id="myimg" style="-webkit-user-select: none" src="http://localhost:10080/test">
+</body>
+</html>
